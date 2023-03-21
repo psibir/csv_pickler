@@ -1,0 +1,49 @@
+
+# csv_pickler
+
+*A CSV-Pickle Utility*
+
+## Description
+
+This Python script converts CSV files to Pickle files and vice versa. It can handle single files or bulk conversion of multiple files in a directory.
+
+
+## Business Use Case
+
+This script can be useful for businesses that work with large amounts of data and need to efficiently store and retrieve it. Pickle files are a binary format that can be loaded into Python much faster than CSV files. Additionally, compressed Pickle files can take up less storage space than the original CSV files.
+
+For example, a business that collects data from multiple sources might want to use this script to convert the CSV files from each source into Pickle files for faster processing. Alternatively, they might want to convert their existing Pickle files back to CSV for easier sharing with partners or customers who may not have the capability to read Pickle files.
+
+
+## How to Run
+
+The script can be run from the command line with the following arguments:
+
+```
+python3 csv_to_pickle.py [-h] [--delimiter DELIMITER] [--compress] [--reverse] input_path output_path
+```
+
+### Arguments:
+
+```
+input_path - the path to the input CSV or Pickle file or directory.
+output_path - the path to the output Pickle or CSV file or directory.
+--delimiter - the delimiter character used in the CSV file. Default is ','.
+--compress - compress the output Pickle file with gzip.
+--reverse - convert from Pickle to CSV instead of CSV to Pickle.
+```
+
+### Example usage:
+
+```# Convert a single CSV file to Pickle
+python3 csv_to_pickle.py mydata.csv mydata.pickle
+
+# Convert all CSV files in a directory to Pickle
+python3 csv_to_pickle.py mycsvdir/ mypickledir/
+
+# Convert a Pickle file back to CSV
+python3 csv_to_pickle.py --reverse mydata.pickle mydata.csv
+
+# Convert a CSV file to a compressed Pickle file
+python3 csv_to_pickle.py --compress mydata.csv mydata.pickle.gz
+```
