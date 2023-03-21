@@ -1,7 +1,7 @@
 
 # csv_pickler
 
-*A CSV-Pickle Utility*
+*A CSV/Pickle Conversion Utility*
 
 ## Description
 
