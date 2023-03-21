@@ -20,7 +20,7 @@ For example, a business that collects data from multiple sources might want to u
 The script can be run from the command line with the following arguments:
 
 ```
-python3 csv_to_pickle.py [-h] [--delimiter DELIMITER] [--compress] [--reverse] input_path output_path
+python3 main.py [-h] [--delimiter DELIMITER] [--compress] [--reverse] input_path output_path
 ```
 
 ### Arguments:
